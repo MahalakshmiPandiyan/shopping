@@ -1,0 +1,37 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item item3">
+            <a>
+                <img src="https://i0.wp.com/www.gktoday.in/wp-content/uploads/2016/04/Product-in-Marketing.png?w=1140&ssl=1">
+            <h4>All Products</h4>
+            </a>
+        </div>
+        <div class=" item item2">
+            <a>
+                <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/03/vastu-tips-electronic-1583902426-1583904794.jpg">
+                <h4>Electronics</h4> 
+            </a>
+        </div>
+        <div class="item item1">
+            <a>
+                <img  src="https://assets.diamondnexus.com/q_auto,f_auto/diamond_nexus/blog/2019/oct/30f/1.jpg">
+                <h4>Jewllery</h4>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
